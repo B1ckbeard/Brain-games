@@ -29,11 +29,19 @@ const evenCheck = (number, userAnswer) => {
             }
         }
         else {
-            if (userAnswer === 'yes'){
+            /*if (userAnswer === 'yes'){
                 console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
             }
             else if (userAnswer === 'no'){
-                console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");;
+                console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
+            }*/
+            switch(userAnswer){
+                case 'yes':
+                    console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+                    break;
+                case 'no':
+                    console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
+                    break;
             }
             console.log(`Let's try again, ${name}!`);
         }
