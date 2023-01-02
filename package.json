@@ -16,11 +16,13 @@
     "url": "https://github.com/B1ckbeard/frontend-project-44/issues"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "homepage": "https://github.com/B1ckbeard/frontend-project-44#readme",
   "type": "module",
   "dependencies": {
     "readline-sync": "^1.4.10"
-  }
+  },
+  "devDependencies": {}
 }
