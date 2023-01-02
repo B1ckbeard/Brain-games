@@ -16,9 +16,9 @@ const answer = () => readlineSync.question('Your answer: ');
 
 let trueCounter = 0;
 
-const evenCheck = (num, ans) => {
-    if (ans === 'yes' || ans === 'no'){
-        if ((num % 2 === 0 && ans === 'yes') || (num % 2 === 1 && ans === 'no')){
+const evenCheck = (number, userAnswer) => {
+    if (userAnswer === 'yes' || userAnswer === 'no'){
+        if ((number % 2 === 0 && userAnswer === 'yes') || (number % 2 === 1 && userAnswer === 'no')){
             console.log('Correct!');
             trueCounter += 1;
             if (trueCounter < 3){
@@ -29,10 +29,10 @@ const evenCheck = (num, ans) => {
             }
         }
         else {
-            if (ans === 'yes'){
+            if (userAnswer === 'yes'){
                 console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
             }
-            else if (ans === 'no'){
+            else if (userAnswer === 'no'){
                 console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");;
             }
             console.log(`Let's try again, ${name}!`);
