@@ -3,7 +3,7 @@ import { randomNumber } from '../index.js';
 import { question } from '../index.js';
 import { check } from '../index.js';
 
-const userName = whatIsYourName();
+const userName = whatIsYourName();//ввод имени мользователя и приветствие
 console.log('What is the result of the expression?');
 
 const randomOperation = () => {

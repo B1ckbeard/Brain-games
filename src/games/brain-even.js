@@ -3,7 +3,7 @@ import { randomNumber } from '../index.js';
 import { question } from '../index.js';
 import { check } from '../index.js';
 
-const userName = whatIsYourName();
+const userName = whatIsYourName();//ввод имени мользователя и приветствие
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const evenCheck = (number = randomNumber()) => {
