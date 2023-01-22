@@ -1,5 +1,9 @@
+import whatIsYourName from '../cli.js';
 import { randomNumber } from '../index.js';
 import { check } from '../index.js';
+
+const userName = whatIsYourName();//ввод имени мользователя и приветствие
+console.log('What number is missing in the progression?');
 
 export const makeProgression = (step = randomNumber()) =>{
     let startNumber = randomNumber();
@@ -10,8 +14,8 @@ export const makeProgression = (step = randomNumber()) =>{
     }
     let index = Math.floor(Math.random() * mas.length);
     let hiddenNumber = mas[index];
-    console.log(hiddenNumber);
+    //console.log(hiddenNumber);
     mas[index] = '..';
     console.log(mas);
-    check(makeProgression, 'Dima', hiddenNumber);
+    check(makeProgression, userName, hiddenNumber);
 }
