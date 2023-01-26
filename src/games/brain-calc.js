@@ -25,6 +25,7 @@ const brainCalc = (a = randomNumber(), b = randomNumber(), op = randomOperation(
     case '*':
       correctAnswer = a * b;
       break;
+    default: // Do nothing
   }
   check(brainCalc, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
 };
