@@ -5,7 +5,7 @@ import { check } from '../index.js';
 const userName = whatIsYourName();//ввод имени мользователя и приветствие
 console.log('What number is missing in the progression?');
 
-export const makeProgression = (step = randomNumber()) =>{
+const makeProgression = (step = randomNumber()) =>{
     let startNumber = randomNumber();
     let mas = [];
     for (let i = 0; i<10;i+=1){
@@ -19,3 +19,5 @@ export const makeProgression = (step = randomNumber()) =>{
     console.log(mas);
     check(makeProgression, userName, hiddenNumber);
 }
+
+export default makeProgression;

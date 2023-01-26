@@ -8,7 +8,7 @@ export const question = (exp) =>{
 
 //генератор случайных чисел
 export const randomNumber = () =>{
-    const number = Math.floor(Math.random() * 10);
+    const number = Math.floor(Math.random() * 100);
     return number;
 }
 
