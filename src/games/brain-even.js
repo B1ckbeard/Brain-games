@@ -8,15 +8,15 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 //функция проверки числа не чётность/нечетность
 const evenCheck = (number = randomNumber()) => {
-    question(number);
-    let correctAnswer = '';
-    if (number % 2 === 0){
-        correctAnswer = 'yes';
-    }
-    else {
-        correctAnswer = 'no';
-    }
-    check(evenCheck, userName, correctAnswer);//передача в функцию сравнения результата с ответом игрока 
+  question(number);
+  let correctAnswer = '';
+  if (number % 2 === 0) {
+    correctAnswer = 'yes';
+  }
+  else {
+    correctAnswer = 'no';
+  }
+  check(evenCheck, userName, correctAnswer);//передача в функцию сравнения результата с ответом игрока 
 }
 
 export default evenCheck;
