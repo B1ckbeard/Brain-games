@@ -1,5 +1,6 @@
 import whatIsYourName from '../cli.js';
 import { randomNumber } from '../index.js';
+import { question } from '../index.js';
 import { check } from '../index.js';
 
 const userName = whatIsYourName();//ввод имени мользователя и приветствие
@@ -16,7 +17,8 @@ const makeProgression = (step = randomNumber()) =>{
     let hiddenNumber = mas[index];
     //console.log(hiddenNumber);
     mas[index] = '..';
-    console.log(mas);
+    //console.log(mas);
+    question(mas);
     check(makeProgression, userName, hiddenNumber);
 }
 
