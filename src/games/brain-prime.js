@@ -9,25 +9,18 @@ console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 const brainPrime = (n = randomNumber()) => {
     question(n);
     let correctAnswer = '';
-    let flag = 0;
     if (n > 1) {
         for (let i = 2; i < n; i++) {
           if (n % i == 0) {
-            flag = 0;
+            correctAnswer = 'no';
             break;
           }
           else{
-            flag = 1;
+            correctAnswer = 'yes';
           }
         }
     }
     else {
-        flag = 0;
-    }
-    if (flag === 1){
-        correctAnswer = 'yes';
-    }
-    else{
         correctAnswer = 'no';
     }
 
