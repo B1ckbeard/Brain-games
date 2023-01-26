@@ -8,17 +8,15 @@ const brainPrime = (number = randomNumber()) => {
   question(number);
   let correctAnswer = '';
   if (number > 1) {
-    for (let i = 2; i < number; i+=1) {
+    for (let i = 2; i < number; i += 1) {
       if (number % i === 0) {
         correctAnswer = 'no';
         break;
-      }
-      else {
+      } else {
         correctAnswer = 'yes';
       }
     }
-  }
-  else {
+  } else {
     correctAnswer = 'no';
   }
   check(brainPrime, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
