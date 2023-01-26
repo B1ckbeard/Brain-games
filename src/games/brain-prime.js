@@ -1,7 +1,7 @@
 import whatIsYourName from '../cli.js';
 import { randomNumber, question, check } from '../index.js';
 
-const userName = whatIsYourName();//ввод имени мользователя и приветствие
+const userName = whatIsYourName();// ввод имени мользователя и приветствие
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
 const brainPrime = (number = randomNumber()) => {
@@ -22,7 +22,7 @@ const brainPrime = (number = randomNumber()) => {
     correctAnswer = 'no';
   }
 
-  check(brainPrime, userName, correctAnswer);//передача в функцию сравнения результата с ответом игрока 
+  check(brainPrime, userName, correctAnswer);// передача в функцию сравнения результата с ответом игрока 
 }
 
 export default brainPrime;
