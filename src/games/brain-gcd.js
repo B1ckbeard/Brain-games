@@ -10,8 +10,7 @@ const brainGcd = (a = randomNumber(), b = randomNumber()) => {
   while (a !== b) {
     if (a > b) {
       a -= b;
-    }
-    else {
+    } else {
       b -= a;
     }
   }
