@@ -9,7 +9,7 @@ const randomOperation = () => {
   const operationsList = ['+', '-', '*'];
   const operation = Math.floor(Math.random() * operationsList.length);
   return operationsList[operation];
-}
+};
 
 // функция принимает 2 случайных числа и операцию, и вычисляет значение
 const brainCalc = (a = randomNumber(), b = randomNumber(), op = randomOperation()) => {
@@ -26,7 +26,7 @@ const brainCalc = (a = randomNumber(), b = randomNumber(), op = randomOperation(
       correctAnswer = a * b;
       break;
   }
-  check(brainCalc, userName, correctAnswer);// передача в функцию сравнения результата с ответом игрока 
-}
+  check(brainCalc, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
+};
 
 export default brainCalc;

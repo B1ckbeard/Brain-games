@@ -6,17 +6,17 @@ console.log('What number is missing in the progression?');
 
 // создает прогрессию с пропущенным числом
 const makeProgression = (step = randomNumber()) => {
-  let startNumber = randomNumber();// начальное число
-  let mas = [];
+  const startNumber = randomNumber();// начальное число
+  const mas = [];
   for (let i = 0; i < 10; i += 1) {
-    let nextNumber = startNumber += step;
+    const nextNumber = startNumber += step;
     mas.push(nextNumber);// заполняем массив
   }
-  let index = Math.floor(Math.random() * mas.length);// рандомим индекс пропущенного числа
-  let hiddenNumber = mas[index];
+  const index = Math.floor(Math.random() * mas.length);// рандомим индекс пропущенного числа
+  const hiddenNumber = mas[index];
   mas[index] = '..';// заменяем пропущенное число точками
   question(mas.join(' '));
-  check(makeProgression, userName, hiddenNumber);// передача в функцию сравнения результата с ответом игрока 
-}
+  check(makeProgression, userName, hiddenNumber);// сравнение рез-та с ответом игрока
+};
 
 export default makeProgression;

@@ -9,14 +9,14 @@ const brainGcd = (a = randomNumber(), b = randomNumber()) => {
   question(`${a} ${b}`);
   while (a !== b) {
     if (a > b) {
-      a = a - b;
+      a -= b;
     }
     else {
-      b = b - a;
+      b -= a;
     }
   }
-  let correctAnswer = a;
-  check(brainGcd, userName, correctAnswer);// передача в функцию сравнения результата с ответом игрока 
-}
+  const correctAnswer = a;
+  check(brainGcd, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
+};
 
 export default brainGcd;

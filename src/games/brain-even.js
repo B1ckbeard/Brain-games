@@ -14,7 +14,7 @@ const evenCheck = (number = randomNumber()) => {
   else {
     correctAnswer = 'no';
   }
-  check(evenCheck, userName, correctAnswer);// передача в функцию сравнения результата с ответом игрока 
-}
+  check(evenCheck, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
+};
 
 export default evenCheck;

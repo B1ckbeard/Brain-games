@@ -8,8 +8,8 @@ const brainPrime = (number = randomNumber()) => {
   question(number);
   let correctAnswer = '';
   if (number > 1) {
-    for (let i = 2; i < number; i++) {
-      if (number % i == 0) {
+    for (let i = 2; i < number; i+=1) {
+      if (number % i === 0) {
         correctAnswer = 'no';
         break;
       }
@@ -21,8 +21,7 @@ const brainPrime = (number = randomNumber()) => {
   else {
     correctAnswer = 'no';
   }
-
-  check(brainPrime, userName, correctAnswer);// передача в функцию сравнения результата с ответом игрока 
-}
+  check(brainPrime, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
+};
 
 export default brainPrime;
