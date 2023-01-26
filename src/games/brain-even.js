@@ -10,8 +10,7 @@ const evenCheck = (number = randomNumber()) => {
   let correctAnswer = '';
   if (number % 2 === 0) {
     correctAnswer = 'yes';
-  }
-  else {
+  } else {
     correctAnswer = 'no';
   }
   check(evenCheck, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
