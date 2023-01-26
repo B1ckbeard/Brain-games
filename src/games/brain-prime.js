@@ -7,7 +7,7 @@ const userName = whatIsYourName();//ввод имени мользователя
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
 const brainPrime = (number = randomNumber()) => {
-    question(n);
+    question(number);
     let correctAnswer = '';
     if (number > 1) {
         for (let i = 2; i < number; i++) {
