@@ -19,7 +19,7 @@ const i = 3;// максимальное количество раундов
 // и если ответ верный - игра продолжается i раундов, иначе - конец игры
 export const check = (func, userName, correctAnswer) => {
   const userAns = userAnswer();// ввод и присваивание константе ответа игрока
-  if (correctAnswer === userAns) { // сравнение ответа игрока с правильным
+  if (correctAnswer == userAns) { // сравнение ответа игрока с правильным
     console.log('Correct!');
     trueCounter += 1;// инкремент счетчика
     if (trueCounter < i) {// если кол-во выигранных раундов подряд < макс. кол-ва раундов
