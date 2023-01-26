@@ -6,8 +6,8 @@ console.log('Find the greatest common divisor of given numbers.');
 
 // вычисление НОД
 const brainGcd = (firstNum = randomNumber(), secondNum = randomNumber()) => {
-  const a = firstNum;
-  const b = secondNum;
+  let a = firstNum;
+  let b = secondNum;
   question(`${a} ${b}`);
   while (a !== b) {
     if (a > b) {
