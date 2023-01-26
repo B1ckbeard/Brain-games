@@ -18,7 +18,7 @@ const makeProgression = (step = randomNumber()) =>{
     let hiddenNumber = mas[index];
     //console.log(hiddenNumber);
     mas[index] = '..';//заменяем пропущенное число точками
-    question(mas);
+    question(mas.join(' '));
     check(makeProgression, userName, hiddenNumber);//передача в функцию сравнения результата с ответом игрока 
 }
 
