@@ -6,12 +6,12 @@ import { check } from '../index.js';
 const userName = whatIsYourName();//ввод имени мользователя и приветствие
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-const brainPrime = (n = randomNumber()) => {
+const brainPrime = (number = randomNumber()) => {
     question(n);
     let correctAnswer = '';
-    if (n > 1) {
-        for (let i = 2; i < n; i++) {
-          if (n % i == 0) {
+    if (number > 1) {
+        for (let i = 2; i < number; i++) {
+          if (number % i == 0) {
             correctAnswer = 'no';
             break;
           }
