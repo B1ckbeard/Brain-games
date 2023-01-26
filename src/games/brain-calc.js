@@ -8,7 +8,7 @@ console.log('What is the result of the expression?');
 
 //функция возвращает случайную операцию из заданного массива
 const randomOperation = () => {
-    const operationsList = ["+", "-", "*"];
+    const operationsList = ['+', '-', '*'];
     const operation = Math.floor(Math.random() * operationsList.length);
     return operationsList[operation];
 }
