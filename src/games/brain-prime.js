@@ -1,7 +1,5 @@
 import whatIsYourName from '../cli.js';
-import { randomNumber } from '../index.js';
-import { question } from '../index.js';
-import { check } from '../index.js';
+import { randomNumber, question, check } from '../index.js';
 
 const userName = whatIsYourName();//ввод имени мользователя и приветствие
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
