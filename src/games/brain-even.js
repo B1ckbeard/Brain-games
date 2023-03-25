@@ -1,18 +1,23 @@
 import whatIsYourName from '../cli.js';
-import { randomNumber, question, check } from '../index.js';
+import { question, check } from '../index.js';
+import { randomNumber } from '../utils.js';
 
 const userName = whatIsYourName();// ввод имени мользователя и приветствие
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 // функция проверки числа не чётность/нечетность
-const evenCheck = (number = randomNumber()) => {
-  question(number);
-  let correctAnswer = '';
+const isEven = (number) => {
   if (number % 2 === 0) {
-    correctAnswer = 'yes';
+    return 'yes';
   } else {
-    correctAnswer = 'no';
+    return 'no';
   }
+};
+
+const evenCheck = () => {
+  const number = randomNumber();
+  question(number);
+  const correctAnswer = isEven(number);
   check(evenCheck, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
 };
 

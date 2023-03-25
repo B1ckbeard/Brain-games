@@ -1,13 +1,14 @@
 import whatIsYourName from '../cli.js';
-import { randomNumber, question, check } from '../index.js';
+import { question, check } from '../index.js';
+import { randomNumber } from '../utils.js';
 
 const userName = whatIsYourName();// ввод имени мользователя и приветствие
 console.log('Find the greatest common divisor of given numbers.');
 
 // вычисление НОД
-const brainGcd = (firstNum = randomNumber(), secondNum = randomNumber()) => {
-  let a = firstNum;
-  let b = secondNum;
+const brainGcd = () => {
+  let a = randomNumber();
+  let b = randomNumber();
   question(`${a} ${b}`);
   while (a !== b) {
     if (a > b) {

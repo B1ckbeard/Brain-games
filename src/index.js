@@ -6,12 +6,6 @@ export const question = (exp) => {
   console.log(`Question: ${exp}`);
 };
 
-// генератор случайных чисел
-export const randomNumber = () => {
-  const number = Math.floor(Math.random() * 100 + 1);
-  return number;
-};
-
 let trueCounter = 0;// счетчик правильных ответов
 const i = 3;// максимальное количество раундов
 
