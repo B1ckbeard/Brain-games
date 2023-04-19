@@ -1,6 +1,6 @@
-import whatIsYourName from '../cli.js';
-import { question, check } from '../index.js';
-import { randomNumber } from '../utils.js';
+import whatIsYourName from '../cli';
+import { question, check } from '../index';
+import { randomNumber } from '../utils';
 
 const userName = whatIsYourName();// ввод имени мользователя и приветствие
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -9,9 +9,8 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const isEven = (number) => {
   if (number % 2 === 0) {
     return 'yes';
-  } else {
-    return 'no';
   }
+  return 'no';
 };
 
 const evenCheck = () => {

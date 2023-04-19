@@ -1,11 +1,11 @@
-import whatIsYourName from '../cli.js';
-import { question, check } from '../index.js';
-import { randomNumber } from '../utils.js';
+import whatIsYourName from '../cli';
+import { question, check } from '../index';
+import { randomNumber } from '../utils';
 
 const userName = whatIsYourName();// ввод имени мользователя и приветствие
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-//простое ли число?
+// простое ли число?
 const isPrime = (number) => {
   let correctAnswer = '';
   if (number > 1) {
