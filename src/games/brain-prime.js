@@ -27,7 +27,7 @@ const brainPrime = () => {
   const number = randomNumber();
   question(number);
   const correctAnswer = isPrime(number);
-  check(brainPrime, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
+  check(brainPrime, userName, correctAnswer);// передача в ф-ю сравнения рез-та с ответом игрока
 };
 
 export default brainPrime;
