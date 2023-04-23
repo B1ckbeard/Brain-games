@@ -11,6 +11,7 @@ const randomOperation = () => {
   return operationsList[operation];
 };
 
+// вычисляет значение, в зависимости от операции
 const calc = (a, b, op) => {
   let correctAnswer = 0;
   switch (op) {

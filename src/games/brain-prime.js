@@ -1,9 +1,10 @@
 import check from '../index.js';
 import randomNumber from '../utils.js';
 
+// описание игры
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-// простое ли число?
+// вычисляет простое ли число?
 const isPrime = (number) => {
   let correctAnswer = '';
   if (number > 1) {

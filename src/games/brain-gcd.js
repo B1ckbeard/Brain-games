@@ -1,6 +1,7 @@
 import check from '../index.js';
 import randomNumber from '../utils.js';
 
+// описание игры
 const description = 'Find the greatest common divisor of given numbers.';
 
 // вычисление НОД

@@ -1,6 +1,7 @@
 import check from '../index.js';
 import randomNumber from '../utils.js';
 
+// описание игры
 const description = 'What number is missing in the progression?';
 
 // функция для формирования прогрессии
