@@ -27,6 +27,7 @@ const check = (game, description) => {
       console.log('Correct!');
     } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+      console.log('typeof', typeof userAnswer, typeof correctAnswer);
       console.log(`Let's try again, ${name}!`);
       return;
     }
