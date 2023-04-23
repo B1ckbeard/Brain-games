@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 
 const getQuestionAndAnswer = (game) => {
   const [question, correctAnswer] = game();
+  console.log(question, correctAnswer);
   return (question, correctAnswer);
 };
 
