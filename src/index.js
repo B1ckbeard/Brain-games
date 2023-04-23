@@ -21,7 +21,7 @@ const check = (game, description) => {
   const countRounds = 3;// максимальное количество раундов
   for (let i = 0; i < countRounds; i += 1) {
     // принимаем деструктуризацию вопроса и правильного ответа
-    const [question, correctAnswer] = game();
+    const [question, correctAnswer] = game;
     console.log(`Question: ${question}`);
     // записываем ответ пользователя
     const userAnswer = readlineSync.question('Your answer: ');
