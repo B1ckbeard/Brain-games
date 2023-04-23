@@ -1,12 +1,11 @@
 import readlineSync from 'readline-sync';
 
-/*
+
 const getQuestionAndAnswer = (game) => {
   const [question, correctAnswer] = game();
-  console.log(question, correctAnswer);
-  return (question, correctAnswer);
+  return ([question, correctAnswer]);
 };
-*/
+
 
 const check = (game, description) => {
   // приветствуем игрока и записываем имя
@@ -21,7 +20,7 @@ const check = (game, description) => {
   const countRounds = 3;// максимальное количество раундов
   for (let i = 0; i < countRounds; i += 1) {
     // принимаем деструктуризацию вопроса и правильного ответа
-    const [question, correctAnswer] = game;
+    const [question, correctAnswer] = getQuestionAndAnswer(game);
     console.log(`Question: ${question}`);
     // записываем ответ пользователя
     const userAnswer = readlineSync.question('Your answer: ');
