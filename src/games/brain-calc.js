@@ -1,9 +1,8 @@
-import whatIsYourName from '../cli.js';
-import { question, check } from '../index.js';
 import randomNumber from '../utils.js';
+import check from '../index.js';
 
-const userName = whatIsYourName();// ввод имени мользователя и приветствие
-console.log('What is the result of the expression?');
+// описание игры
+const description = 'What is the result of the expression?';
 
 // функция возвращает случайную операцию из заданного массива
 const randomOperation = () => {
@@ -29,14 +28,16 @@ const calc = (a, b, op) => {
   return correctAnswer;
 };
 
-// функция принимает 2 случайных числа и операцию, и вычисляет значение
+// функция принимает 2 случайных числа и операцию, и возвращает значение
 const brainCalc = () => {
   const a = randomNumber(10);
   const b = randomNumber(10);
   const op = randomOperation();
-  question(`${a} ${op} ${b}`);
+  const question = (`${a} ${op} ${b}`);
   const correctAnswer = calc(a, b, op);
-  check(brainCalc, userName, correctAnswer);// передача в функцию сравнения рез-та с ответом игрока
+  return (question, correctAnswer);
 };
+
+check(brainCalc, description);
 
 export default brainCalc;

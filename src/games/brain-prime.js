@@ -1,9 +1,7 @@
-import whatIsYourName from '../cli.js';
-import { question, check } from '../index.js';
+import check from '../index.js';
 import randomNumber from '../utils.js';
 
-const userName = whatIsYourName();// ввод имени мользователя и приветствие
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // простое ли число?
 const isPrime = (number) => {
@@ -25,9 +23,11 @@ const isPrime = (number) => {
 
 const brainPrime = () => {
   const number = randomNumber();
-  question(number);
   const correctAnswer = isPrime(number);
-  check(brainPrime, userName, correctAnswer);// передача в ф-ю сравнения рез-та с ответом игрока
+  const question = number;
+  return (question, correctAnswer);
 };
+
+check(brainPrime, description);
 
 export default brainPrime;
