@@ -1,11 +1,9 @@
 import readlineSync from 'readline-sync';
 
-
 const getQuestionAndAnswer = (game) => {
   const [question, correctAnswer] = game();
   return ([question, correctAnswer]);
 };
-
 
 const check = (game, description) => {
   // приветствуем игрока и записываем имя

@@ -25,7 +25,7 @@ const brainPrime = () => {
   const number = randomNumber();
   const correctAnswer = isPrime(number);
   const question = number;
-  return (question, correctAnswer);
+  return ([question, correctAnswer]);
 };
 
 check(brainPrime, description);

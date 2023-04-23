@@ -11,7 +11,7 @@ const evenCheck = () => {
   const number = randomNumber();
   const correctAnswer = isEven(number) ? 'yes' : 'no';
   const question = number;
-  return (question, correctAnswer);
+  return ([question, correctAnswer]);
 };
 
 check(evenCheck, description);

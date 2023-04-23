@@ -22,7 +22,7 @@ const makeProgression = () => {
   mas[index] = '..';// заменяем пропущенное число точками
   const question = (mas.join(' '));
   const correctAnswer = hiddenNumber;
-  return (question, correctAnswer);
+  return ([question, correctAnswer]);
 };
 
 check(makeProgression, description);

@@ -16,7 +16,7 @@ const brainGcd = () => {
     }
   }
   const correctAnswer = a;
-  return (question, correctAnswer);
+  return ([question, correctAnswer]);
 };
 
 check(brainGcd, description);
