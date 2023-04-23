@@ -35,7 +35,7 @@ const brainCalc = () => {
   const op = randomOperation();
   const question = (`${a} ${op} ${b}`);
   const correctAnswer = calc(a, b, op);
-  return (question, correctAnswer);
+  return ([question, correctAnswer]);
 };
 
 check(brainCalc, description);
