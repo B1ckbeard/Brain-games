@@ -23,11 +23,11 @@ const check = (game, description) => {
     // записываем ответ пользователя
     const userAnswer = readlineSync.question('Your answer: ');
     // проверяем совпадает ли ответ юзера и правильный ответ
-    if (correctAnswer === userAnswer) {
+    if (correctAnswer.toString() === userAnswer) {
       console.log('Correct!');
     } else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-      console.log('typeof', typeof userAnswer, typeof correctAnswer);
+      // console.log('typeof', typeof userAnswer, typeof correctAnswer);
       console.log(`Let's try again, ${name}!`);
       return;
     }
