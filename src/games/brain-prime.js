@@ -6,29 +6,24 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 // вычисляет простое ли число?
 const isPrime = (number) => {
-  let correctAnswer = '';
   if (number > 1) {
     for (let i = 2; i < number; i += 1) {
-      if (number % i === 0) {
-        correctAnswer = 'no';
-        break;
-      } else {
-        correctAnswer = 'yes';
+      if (!number % i === 0) {
+        return true;
       }
     }
   } else {
-    correctAnswer = 'no';
+    return false;
   }
-  return correctAnswer;
 };
 
-const brainPrime = () => {
+const getAnswerAndQuestion = () => {
   const number = randomNumber();
-  const correctAnswer = isPrime(number);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   const question = number;
-  return ([question, correctAnswer]);
+  return [question, correctAnswer];
 };
 
-check(brainPrime, description);
+check(getAnswerAndQuestion, description);
 
-export default brainPrime;
+export default getAnswerAndQuestion;

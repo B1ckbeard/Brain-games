@@ -3,42 +3,38 @@ import check from '../index.js';
 
 // описание игры
 const description = 'What is the result of the expression?';
+// список с операциями для randomOperation
+const operationsList = ['+', '-', '*'];
 
 // функция возвращает случайную операцию из заданного массива
 const randomOperation = () => {
-  const operationsList = ['+', '-', '*'];
   const operation = Math.floor(Math.random() * operationsList.length);
   return operationsList[operation];
 };
 
 // вычисляет значение, в зависимости от операции
-const calc = (a, b, op) => {
-  let correctAnswer = 0;
+const calculate = (a, b, op) => {
   switch (op) {
     case '+':
-      correctAnswer = a + b;
-      break;
+      return a + b;
     case '-':
-      correctAnswer = a - b;
-      break;
+      return a - b;
     case '*':
-      correctAnswer = a * b;
-      break;
+      return a * b;
     default: // Do nothing
   }
-  return correctAnswer;
 };
 
 // функция принимает 2 случайных числа и операцию, и возвращает значение
-const brainCalc = () => {
-  const a = randomNumber(10);
-  const b = randomNumber(10);
-  const op = randomOperation();
-  const question = (`${a} ${op} ${b}`);
-  const correctAnswer = calc(a, b, op);
-  return ([question, correctAnswer]);
+const getAnswerAndQuestion = () => {
+  const firstNumber = randomNumber(10);
+  const secondNumber = randomNumber(10);
+  const randomSymbol = randomOperation();
+  const question = (`${firstNumber} ${randomSymbol} ${secondNumber}`);
+  const correctAnswer = calculate(firstNumber, secondNumber, randomSymbol);
+  return [question, correctAnswer];
 };
 
-check(brainCalc, description);
+check(getAnswerAndQuestion, description);
 
-export default brainCalc;
+export default getAnswerAndQuestion;

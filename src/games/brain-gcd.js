@@ -5,10 +5,9 @@ import randomNumber from '../utils.js';
 const description = 'Find the greatest common divisor of given numbers.';
 
 // вычисление НОД
-const brainGcd = () => {
-  let a = randomNumber();
-  let b = randomNumber();
-  const question = (`${a} ${b}`);
+const getGcd = (firstNumber, secondNumber) => {
+  let a = firstNumber;
+  let b = secondNumber;
   while (a !== b) {
     if (a > b) {
       a -= b;
@@ -16,10 +15,17 @@ const brainGcd = () => {
       b -= a;
     }
   }
-  const correctAnswer = a;
-  return ([question, correctAnswer]);
+  return a;
 };
 
-check(brainGcd, description);
+const getAnswerAndQuestion = () => {
+  const firstNumber = randomNumber();
+  const secondNumber = randomNumber();
+  const question = (`${firstNumber} ${secondNumber}`);
+  const correctAnswer = getGcd(firstNumber, secondNumber);
+  return [question, correctAnswer];
+};
 
-export default brainGcd;
+check(getAnswerAndQuestion, description);
+
+export default getAnswerAndQuestion;

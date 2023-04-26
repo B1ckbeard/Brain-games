@@ -5,10 +5,11 @@ import randomNumber from '../utils.js';
 const description = 'What number is missing in the progression?';
 
 // функция для формирования прогрессии
-const getProgression = (startNumber = randomNumber(10), step = randomNumber(10)) => {
+const getProgression = (startNumber, step) => {
   let nextNumber = startNumber;
   const mas = [];
-  for (let i = 0; i < 10; i += 1) {
+  const length = 10;
+  for (let i = 0; i < length; i += 1) {
     nextNumber += step;
     mas.push(nextNumber);// заполняем массив
   }
@@ -17,15 +18,21 @@ const getProgression = (startNumber = randomNumber(10), step = randomNumber(10))
 
 // создает прогрессию с пропущенным числом
 const makeProgression = () => {
-  const mas = getProgression();// получаем сформированную прогрессию
-  const index = Math.floor(Math.random() * mas.length);// рандомим индекс пропущенного числа
-  const hiddenNumber = mas[index];
-  mas[index] = '..';// заменяем пропущенное число точками
-  const question = (mas.join(' '));
-  const correctAnswer = hiddenNumber;
-  return ([question, correctAnswer]);
+  const startNumber = randomNumber(10);
+  const step = randomNumber(10);
+  const progression = getProgression(startNumber, step);// получаем сформированную прогрессию
+  // рандомим пропущенное число
+  const hiddenNumberIndex = Math.floor(Math.random() * progression.length);// получаем индекс
+  const hiddenNumber = progression[hiddenNumberIndex];// получаем число
+  progression[hiddenNumberIndex] = '..';// заменяем пропущенное число точками
+  return [progression.join(' '), hiddenNumber];
 };
 
-check(makeProgression, description);
+const getAnswerAndQuestion = () => {
+  const [question, correctAnswer] = makeProgression();
+  return [question, correctAnswer];
+};
 
-export default makeProgression;
+check(getAnswerAndQuestion, description);
+
+export default getAnswerAndQuestion;
