@@ -6,15 +6,10 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 // вычисляет простое ли число?
 const isPrime = (number) => {
-  if (number > 1) {
-    for (let i = 2; i < number; i += 1) {
-      if (!number % i === 0) {
-        return true;
-      }
-    }
-  } else {
-    return false;
+  for (let i = 2, j = Math.sqrt(number); i <= j; i += 1) {
+    if (number % i === 0) return false;
   }
+  return number > 1;
 };
 
 const getAnswerAndQuestion = () => {
