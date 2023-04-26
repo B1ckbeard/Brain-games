@@ -14,15 +14,20 @@ const randomOperation = () => {
 
 // вычисляет значение, в зависимости от операции
 const calculate = (a, b, op) => {
+  let result = 0;
   switch (op) {
     case '+':
-      return a + b;
+      result = a + b;
+      break;
     case '-':
-      return a - b;
+      result = a - b;
+      break;
     case '*':
-      return a * b;
+      result = a * b;
+      break;
     default: // Do nothing
   }
+  return result;
 };
 
 // функция принимает 2 случайных числа и операцию, и возвращает значение
