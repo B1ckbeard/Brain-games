@@ -1,3 +1,8 @@
+## Игры разума
+Консольное приложение для прокачки мозга, представляющее из себя набор из пяти арифметических игр. \
+Стек технологий: JavaScript, npm, cli, readline-sync, GitHub Actions, Markdown, Codeclimate.
+
+
 ### Hexlet tests, linter and codeclimate status:
 [![Actions Status](https://github.com/B1ckbeard/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/B1ckbeard/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/B1ckbeard/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/77d4211ca2efc7bb91c6/maintainability" /></a>
